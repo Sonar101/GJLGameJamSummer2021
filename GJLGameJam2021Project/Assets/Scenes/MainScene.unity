@@ -239,7 +239,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &900769378
+--- !u!43 &1159334860
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -446,8 +446,8 @@ MonoBehaviour:
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
-  m_Mesh: {fileID: 900769378}
-  m_InstanceId: 29102
+  m_Mesh: {fileID: 1159334860}
+  m_InstanceId: 19314
 --- !u!212 &1346295674
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -546,9 +546,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4987587164348496360, guid: a45a1797320c443739732f3933bb7e57, type: 3}
+      propertyPath: maxSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987587164348496360, guid: a45a1797320c443739732f3933bb7e57, type: 3}
+      propertyPath: acceleration
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 7152835660341888320, guid: a45a1797320c443739732f3933bb7e57, type: 3}
       propertyPath: m_Name
       value: TempPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152835660341888323, guid: a45a1797320c443739732f3933bb7e57, type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7152835660341888381, guid: a45a1797320c443739732f3933bb7e57, type: 3}
       propertyPath: m_RootOrder
@@ -556,11 +568,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7152835660341888381, guid: a45a1797320c443739732f3933bb7e57, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.031
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7152835660341888381, guid: a45a1797320c443739732f3933bb7e57, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.256
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7152835660341888381, guid: a45a1797320c443739732f3933bb7e57, type: 3}
       propertyPath: m_LocalPosition.z
