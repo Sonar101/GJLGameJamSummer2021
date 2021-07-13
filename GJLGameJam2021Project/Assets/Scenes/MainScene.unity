@@ -546,21 +546,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4987587164348496360, guid: a45a1797320c443739732f3933bb7e57, type: 3}
-      propertyPath: maxSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4987587164348496360, guid: a45a1797320c443739732f3933bb7e57, type: 3}
-      propertyPath: acceleration
-      value: 0.25
+    - target: {fileID: 1322225005, guid: a45a1797320c443739732f3933bb7e57, type: 3}
+      propertyPath: throwSpeed
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7152835660341888320, guid: a45a1797320c443739732f3933bb7e57, type: 3}
       propertyPath: m_Name
       value: TempPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 7152835660341888323, guid: a45a1797320c443739732f3933bb7e57, type: 3}
-      propertyPath: m_LinearDrag
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7152835660341888381, guid: a45a1797320c443739732f3933bb7e57, type: 3}
       propertyPath: m_RootOrder

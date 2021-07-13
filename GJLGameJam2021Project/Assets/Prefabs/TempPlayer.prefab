@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7152835659599189862}
   - component: {fileID: 7152835659599189857}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7152835659971917423}
   - component: {fileID: 7152835659971917422}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AmbientLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,8 @@ GameObject:
   - component: {fileID: 7152835660341888323}
   - component: {fileID: 4987587164348496360}
   - component: {fileID: 2113616342}
-  m_Layer: 0
+  - component: {fileID: 1322225005}
+  m_Layer: 3
   m_Name: TempPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +245,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -264,7 +265,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c0ebcaa1a6c494fb08dc34ac00fc10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 0.01
+  acceleration: 0.25
+  maxMoveSpeed: 1
+  rotSpeed: 2.5
 --- !u!58 &2113616342
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -281,3 +284,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1322225005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7152835660341888320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc6c58c1d8bf4af59fe1a9a908e87a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Flare: {fileID: 1885728134315161702, guid: 7901c10147f9447ca9ca2869427b3b2a, type: 3}
+  throwSpeed: 100
