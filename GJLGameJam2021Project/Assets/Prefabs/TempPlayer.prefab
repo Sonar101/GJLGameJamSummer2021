@@ -58,7 +58,7 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0.939
   m_PointLightInnerAngle: 40
   m_PointLightOuterAngle: 96
-  m_PointLightInnerRadius: 0
+  m_PointLightInnerRadius: 0.09744291
   m_PointLightOuterRadius: 7.74
   m_PointLightDistance: 3
   m_PointLightQuality: 1
@@ -155,6 +155,8 @@ GameObject:
   - component: {fileID: 7152835660341888381}
   - component: {fileID: 7152835660341888322}
   - component: {fileID: 7152835660341888323}
+  - component: {fileID: 4987587164348496360}
+  - component: {fileID: 2113616342}
   m_Layer: 0
   m_Name: TempPlayer
   m_TagString: Untagged
@@ -244,9 +246,38 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &4987587164348496360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7152835660341888320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c0ebcaa1a6c494fb08dc34ac00fc10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 0.01
+--- !u!58 &2113616342
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7152835660341888320}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
