@@ -239,7 +239,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1159334860
+--- !u!43 &961388414
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -446,8 +446,8 @@ MonoBehaviour:
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
-  m_Mesh: {fileID: 1159334860}
-  m_InstanceId: 19314
+  m_Mesh: {fileID: 961388414}
+  m_InstanceId: 35246
 --- !u!212 &1346295674
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -546,10 +546,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1322225005, guid: a45a1797320c443739732f3933bb7e57, type: 3}
-      propertyPath: throwSpeed
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 7152835660341888320, guid: a45a1797320c443739732f3933bb7e57, type: 3}
       propertyPath: m_Name
       value: TempPlayer
