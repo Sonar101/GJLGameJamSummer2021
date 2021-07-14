@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RedSquareSpriteAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 343bb18dbc25662498ec0209d38ebd42, type: 3}
+    - {fileID: 2800000, guid: 43f4e12fd674c634884c78e57a3adbd3, type: 3}
+    totalSpriteSurfaceArea: 1406250
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -4553432207079092504, guid: 343bb18dbc25662498ec0209d38ebd42, type: 3}
+  - {fileID: -606202754942766330, guid: 343bb18dbc25662498ec0209d38ebd42, type: 3}
+  - {fileID: 2455148021069055436, guid: 343bb18dbc25662498ec0209d38ebd42, type: 3}
+  - {fileID: 4469199713427763389, guid: 343bb18dbc25662498ec0209d38ebd42, type: 3}
+  - {fileID: 8930223544854763202, guid: 343bb18dbc25662498ec0209d38ebd42, type: 3}
+  - {fileID: -4747734334717340696, guid: 343bb18dbc25662498ec0209d38ebd42, type: 3}
+  - {fileID: -7833723995462509865, guid: 43f4e12fd674c634884c78e57a3adbd3, type: 3}
+  - {fileID: 6255349861630755287, guid: 43f4e12fd674c634884c78e57a3adbd3, type: 3}
+  - {fileID: -7596813338507672985, guid: 43f4e12fd674c634884c78e57a3adbd3, type: 3}
+  - {fileID: 7252676597910869035, guid: 43f4e12fd674c634884c78e57a3adbd3, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - TestTileMap_4
+  - TestTileMap_5
+  - TestTileMap_2
+  - TestTileMap_3
+  - TestTileMap_0
+  - TestTileMap_1
+  - TestSpritesheet_0
+  - TestSpritesheet_1
+  - TestSpritesheet_2
+  - TestSpritesheet_3
+  m_RenderDataMap: {}
+  m_Tag: RedSquareSpriteAtlas
+  m_IsVariant: 0
