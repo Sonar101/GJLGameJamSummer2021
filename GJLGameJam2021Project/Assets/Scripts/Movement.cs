@@ -23,7 +23,8 @@ public class Movement : MonoBehaviour
 
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxMoveSpeed);
 
-        transform.rotation = RotateToDirection(rb.velocity);
+        if(Vector2.SqrMagnitude(rb.velocity) > 0.01)
+            transform.rotation = RotateToDirection(rb.velocity);
     }
 
     private Quaternion RotateToDirection(Vector2 direction)
@@ -36,20 +37,20 @@ public class Movement : MonoBehaviour
     {
         Vector2 accelVec = new Vector2(0, 0);
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             accelVec.x += acceleration;
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             accelVec.x -= acceleration;
         }
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W))
         {
             accelVec.y += acceleration;
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.S))
         {
             accelVec.y -= acceleration;
         }
