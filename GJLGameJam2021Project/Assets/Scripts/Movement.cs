@@ -19,8 +19,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity += GetInputAcceleration();
-
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxMoveSpeed);
 
         if(Vector2.SqrMagnitude(rb.velocity) > 0.01)
@@ -33,28 +31,10 @@ public class Movement : MonoBehaviour
         return Quaternion.Slerp(transform.rotation, rot, rotSpeed * Time.deltaTime);
     }
 
-    private Vector2 GetInputAcceleration()
+    public void Accelerate(Vector2 moveDir)
     {
-        Vector2 accelVec = new Vector2(0, 0);
+        rb.velocity += Vector2.ClampMagnitude(moveDir * acceleration,
+                                              acceleration);
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            accelVec.x += acceleration;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            accelVec.x -= acceleration;
-        }
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            accelVec.y += acceleration;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            accelVec.y -= acceleration;
-        }
-
-        return Vector2.ClampMagnitude(accelVec, acceleration);
     }
 }
