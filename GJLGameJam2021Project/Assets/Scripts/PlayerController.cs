@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public int maxFlareNum = 5;
     public int curFlareNum = 0;
 
-    private float timestep = 0.1f;
+    private const float timestep = 0.1f;
 
     private Movement moveController;
     private FlareThrowBehavior flareThrowBehavior;
@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(timestep);
 
             curFlashlightCharge -= timestep;
-            flashlightController.SetIntensity(curFlashlightCharge / maxFlashlightCharge);
+            flashlightController.SetProgress(curFlashlightCharge / maxFlashlightCharge);
 
             if (curFlashlightCharge <= 0)
             {
