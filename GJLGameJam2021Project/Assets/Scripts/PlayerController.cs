@@ -5,16 +5,21 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public int maxPlayerHealth = 100;
-    protected int curPlayerHealth = 0;
+    public int curPlayerHealth = 0;
 
-    public float maxFlashlightCharge = 1f;
-    protected float curFlashlightCharge = 0f;
+    public float maxFlashlightCharge = 10;
+    public float curFlashlightCharge = 0;
 
     public int maxFlareNum = 5;
-    protected int curFlareNum = 0;
+    public int curFlareNum = 0;
+
+    private float timestep = 0.1f;
 
     private Movement moveController;
     private FlareThrowBehavior flareThrowBehavior;
+    private FlashlightController flashlightController;
+
+    Coroutine flashlightDrainCharge;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +30,10 @@ public class PlayerController : MonoBehaviour
 
         moveController = GetComponent<Movement>();
         flareThrowBehavior = GetComponent<FlareThrowBehavior>();
+        flashlightController = GetComponentInChildren<FlashlightController>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         Vector2 moveDirection = GetInputDirection();
 
@@ -39,6 +45,14 @@ public class PlayerController : MonoBehaviour
             flareThrowBehavior.ThrowFlare(GetMouseDirection());
             curFlareNum--;
             // some sort of update UI function...
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && curFlashlightCharge > 0)
+        {
+            if(flashlightController.ToggleFlashlight())
+                flashlightDrainCharge = StartCoroutine(DrainCharge());
+            else
+                StopCoroutine(flashlightDrainCharge);
         }
     }
 
@@ -66,4 +80,22 @@ public class PlayerController : MonoBehaviour
 
         return moveDirection;
     }
+
+    IEnumerator DrainCharge()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(timestep);
+
+            curFlashlightCharge -= timestep;
+            flashlightController.SetIntensity(curFlashlightCharge / maxFlashlightCharge);
+
+            if (curFlashlightCharge <= 0)
+            {
+                flashlightController.DisableFlashlight();
+                yield break;
+            }
+        }
+    }
+
 }
