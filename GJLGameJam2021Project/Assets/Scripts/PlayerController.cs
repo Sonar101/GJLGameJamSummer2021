@@ -98,4 +98,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Flare" && curFlareNum < 5)
+        {
+            curFlareNum += 1;
+            Destroy(collision.gameObject);
+        }
+    }
+
 }
