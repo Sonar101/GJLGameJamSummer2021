@@ -4947,6 +4947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab278722933bd488fa0c2221a2a836dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxIntensity: 0.5
+  maxFlickerDuration: 0.2
 --- !u!1 &7152835659971917420
 GameObject:
   m_ObjectHideFlags: 0
@@ -5158,7 +5160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c0ebcaa1a6c494fb08dc34ac00fc10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 0.1
+  acceleration: 0.05
   maxMoveSpeed: 3
   rotSpeed: 2.5
 --- !u!114 &1322225005
