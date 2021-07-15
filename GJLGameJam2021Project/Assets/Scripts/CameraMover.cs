@@ -5,29 +5,34 @@ using UnityEngine;
 public class CameraMover : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public GameObject cam;
-    public float camTargetDistance = 2f;
+    private GameObject cam;
+    public float camTargetDistance = 200f;
+    public float screenVecRatio = 50f;
+    public float lerpRate = .02f;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        cam = Camera.main.gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 mousePos = GetMouseDirection();
-        Vector3 mouseRelative = Vector2.ClampMagnitude(mousePos, camTargetDistance);
-        print(mouseRelative);
+        Vector3 playerPos = transform.position;
+        Vector2 mouseDir = GetMouseScreenSpaceDirection();
+        Vector2 mouseDirClamp = Vector2.ClampMagnitude(mouseDir, camTargetDistance) / screenVecRatio;
+        Vector3 camTarget = new Vector3(mouseDirClamp.x + playerPos.x, mouseDirClamp.y + playerPos.y, cam.transform.position.z);
 
-        cam.transform.position = new Vector3(mouseRelative.x, mouseRelative.y, cam.transform.position.z);
-        //cam.transform.position = new Vector3(transform.position.x, transform.position.y, cam.transform.position.z);
+        cam.transform.position = Vector3.Lerp(cam.transform.position, camTarget, lerpRate);
     }
 
-    Vector2 GetMouseDirection()
+    Vector2 GetMouseScreenSpaceDirection()
     {
-        Vector3 mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-        return mousePos - transform.position;
+        Vector2 mousePos = Input.mousePosition;
+        Vector2 screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
+        Vector2 direction = mousePos - screenCenter;
+        return direction;
     }
 }

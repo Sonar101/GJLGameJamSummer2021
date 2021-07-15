@@ -21,8 +21,10 @@ public class Movement : MonoBehaviour
     {
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxMoveSpeed);
 
-        if(Vector2.SqrMagnitude(rb.velocity) > 0.01)
+        /*// Rotating player body based on current velocity
+        if(Vector2.SqrMagnitude(rb.velocity) > 0.01) {
             transform.rotation = RotateToDirection(rb.velocity);
+        }*/
     }
 
     private Quaternion RotateToDirection(Vector2 direction)
@@ -35,6 +37,5 @@ public class Movement : MonoBehaviour
     {
         rb.velocity += Vector2.ClampMagnitude(moveDir * acceleration,
                                               acceleration);
-
     }
 }
