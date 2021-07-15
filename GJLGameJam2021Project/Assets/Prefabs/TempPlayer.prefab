@@ -5036,6 +5036,8 @@ GameObject:
   - component: {fileID: 4987587164348496360}
   - component: {fileID: 1322225005}
   - component: {fileID: 7120096664054334081}
+  - component: {fileID: 1596999996}
+  - component: {fileID: 1596999997}
   m_Layer: 3
   m_Name: TempPlayer
   m_TagString: Player
@@ -5195,3 +5197,34 @@ MonoBehaviour:
   curFlashlightCharge: 0
   maxFlareNum: 5
   curFlareNum: 0
+--- !u!114 &1596999996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7152835660341888320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e9c356a238ca743a0194538135d6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  camTargetDistance: 150
+  screenVecRatio: 100
+  lerpRate: 0.01
+--- !u!114 &1596999997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7152835660341888320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd7c9f9f20f417943b4508e6e2c82b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashlight: {fileID: 7152835659599189863}
+  flashLightDistance: 0.4
+  makeMouseInvisible: 0
