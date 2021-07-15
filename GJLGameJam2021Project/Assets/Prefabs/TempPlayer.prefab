@@ -725,14 +725,14 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 10
+    type: 2
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: 0, y: 0, z: -20}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -869,7 +869,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 220
       mode: 0
       spread: 0
       speed:
@@ -1040,8 +1040,8 @@ ParticleSystem:
       time: 0
       countCurve:
         serializedVersion: 2
-        minMaxState: 0
-        scalar: 1
+        minMaxState: 3
+        scalar: 2
         minScalar: 1
         maxCurve:
           serializedVersion: 2
@@ -1091,9 +1091,9 @@ ParticleSystem:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-      cycleCount: 20
-      repeatInterval: 0.05
-      probability: 0.5
+      cycleCount: 7
+      repeatInterval: 0.1
+      probability: 1
   SizeModule:
     enabled: 1
     curve:
@@ -4947,6 +4947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab278722933bd488fa0c2221a2a836dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxIntensity: 0.5
+  maxFlickerDuration: 0.2
 --- !u!1 &7152835659971917420
 GameObject:
   m_ObjectHideFlags: 0
@@ -5036,7 +5038,7 @@ GameObject:
   - component: {fileID: 7120096664054334081}
   m_Layer: 3
   m_Name: TempPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5098,7 +5100,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fe8bf8458c68ce945a39e9123bb706e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5158,7 +5160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c0ebcaa1a6c494fb08dc34ac00fc10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 0.1
+  acceleration: 0.05
   maxMoveSpeed: 3
   rotSpeed: 2.5
 --- !u!114 &1322225005

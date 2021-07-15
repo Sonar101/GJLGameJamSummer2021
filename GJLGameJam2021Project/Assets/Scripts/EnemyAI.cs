@@ -4,26 +4,38 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    public float speed = 0.5f;
+    public Transform Player;
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         //connect tentacle tip to an invisible object that moves around inside a circle
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 displacement = Player.position - transform.position;
+        displacement = displacement.normalized;
+
         //check distance of player and tentacle tip
+        if (Vector2.Distance(Player.position, transform.position) < 10.0f)
+        {
+            //start heading towards player
+            rb.velocity = displacement;
+            //transform.position += (displacement * speed * Time.deltaTime);
+        }
 
         //player is 500 pixels away from tentacles tip and not attacking
-            //tentacle moves around randomly
+        //tentacle moves around randomly
 
         //player is less than 500 pixels from the tentacle and not attacking
-            //tentacle starts approaching player
+        //tentacle starts approaching player
 
         //tentacle is 100 or 50 from player
-            //start wind up attack and must finish it before returning to check if the player has gotten far.
+        //start wind up attack and must finish it before returning to check if the player has gotten far.
 
 
     }

@@ -35,6 +35,5 @@ public class Movement : MonoBehaviour
     {
         rb.velocity += Vector2.ClampMagnitude(moveDir * acceleration,
                                               acceleration);
-
     }
 }
