@@ -5032,7 +5032,7 @@ GameObject:
   - component: {fileID: 7152835660341888381}
   - component: {fileID: 7152835660341888322}
   - component: {fileID: 7152835660341888323}
-  - component: {fileID: 2113616342}
+  - component: {fileID: 4385341457551260928}
   - component: {fileID: 4987587164348496360}
   - component: {fileID: 1322225005}
   - component: {fileID: 7120096664054334081}
@@ -5102,7 +5102,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe8bf8458c68ce945a39e9123bb706e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a64ea70959ac0ab49ab5d6ea24bda669, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5134,8 +5134,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &2113616342
-CircleCollider2D:
+--- !u!70 &4385341457551260928
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5147,9 +5147,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Offset: {x: 0.1, y: 0}
+  m_Size: {x: 0.74, y: 1.67}
+  m_Direction: 0
 --- !u!114 &4987587164348496360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5209,7 +5209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e9c356a238ca743a0194538135d6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   camTargetDistance: 150
   screenVecRatio: 100
   lerpRate: 0.01
