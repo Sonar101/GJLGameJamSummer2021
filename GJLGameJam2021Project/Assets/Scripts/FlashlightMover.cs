@@ -6,8 +6,10 @@ public class FlashlightMover : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+    private SpriteRenderer flashlightSprite;
     public GameObject flashlight;
-    public float flashLightDistance = 10f;
+    public float jointDistanceFromBody = .3f;
+    public float maxDistanceFromJoint = 10f;
     public bool makeMouseInvisible = false;
 
     // Start is called before the first frame update
@@ -15,21 +17,35 @@ public class FlashlightMover : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        flashlightSprite = flashlight.gameObject.GetComponentInChildren<SpriteRenderer>();
         if (makeMouseInvisible) Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Position flashlight
+        // Calculate flashlight position 
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 mouseDir = new Vector3(mousePos.x - transform.position.x, mousePos.y - transform.position.y, 0);
-        Vector3 mouseDirClamp = Vector3.ClampMagnitude(mouseDir, flashLightDistance);
+        Vector3 mouseDirClamp = Vector3.ClampMagnitude(mouseDir, maxDistanceFromJoint);
 
         flashlight.transform.localPosition = mouseDirClamp;
 
         // Flip player sprite based on flashlight position
-        sr.flipX = ((flashlight.transform.localPosition - transform.position).normalized.x >= 0);
+        print(mouseDirClamp);
+        if (mouseDirClamp.x >= 0) {
+            // facing right
+            sr.flipX = true;
+            flashlightSprite.flipX = true;
+            flashlight.transform.localPosition += new Vector3(jointDistanceFromBody, 0, 0);
+        }
+        else
+        {
+            // facing left
+            sr.flipX = false;
+            flashlightSprite.flipX = false;
+            flashlight.transform.localPosition -= new Vector3(jointDistanceFromBody, 0, 0);
+        }
 
         // Rotate flashlight
         Vector2 mouseDirNorm = new Vector2(mouseDir.x, mouseDir.y).normalized;
