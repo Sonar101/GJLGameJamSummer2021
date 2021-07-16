@@ -5,11 +5,19 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    protected bool inRange = false;
+    bool inRange = false;
 
     protected virtual void Start()
     {
-        LevelManager.current.onInteract += Interact;
+        LevelManager.current.onTryInteract += TryInteract;
+    }
+
+    protected virtual void TryInteract()
+    {
+        if(inRange)
+        {
+            Interact();
+        }
     }
 
     protected virtual void Interact() { }
@@ -32,6 +40,6 @@ public class Interactable : MonoBehaviour
 
     protected virtual void OnDestroy()
     {
-        LevelManager.current.onInteract -= Interact;
+        LevelManager.current.onTryInteract -= TryInteract;
     }
 }

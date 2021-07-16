@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager current;
+    public bool doorsLocked = false;
 
     void Awake()
     {
@@ -20,16 +21,31 @@ public class LevelManager : MonoBehaviour
     }
 
     public event Action onCloseAllDoors;
+    public event Action onCameraRumble;
     public void CloseAllDoors()
     {
         if (onCloseAllDoors != null)
             onCloseAllDoors();
+
+        if (onCameraRumble != null)
+            onCameraRumble();
+
+        doorsLocked = true;
     }
 
-    public event Action onInteract;
-    public void Interact()
+    public event Action onTryInteract;
+    public void TryInteract()
     {
-        if (onInteract != null)
-            onInteract();
+        if (onTryInteract != null)
+            onTryInteract();
+    }
+
+    public event Action<Dialogue> onTriggerDialogue;
+    public void TriggerDialogue(Dialogue dialogue)
+    {
+        if (onTriggerDialogue != null)
+            onTriggerDialogue(dialogue);
+
+        Debug.Log(dialogue.sentence);
     }
 }
