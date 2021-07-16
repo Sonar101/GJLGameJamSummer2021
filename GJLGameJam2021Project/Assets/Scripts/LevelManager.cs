@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager current;
+    public bool doorsLocked = false;
 
     void Awake()
     {
@@ -28,6 +29,8 @@ public class LevelManager : MonoBehaviour
 
         if (onCameraRumble != null)
             onCameraRumble();
+
+        doorsLocked = true;
     }
 
     public event Action onTryInteract;

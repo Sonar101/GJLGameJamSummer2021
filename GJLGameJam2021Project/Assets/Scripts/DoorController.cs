@@ -43,6 +43,14 @@ public class DoorController : Interactable
         open = !open;
     }
 
+    protected override void TryInteract()
+    {
+        if (!LevelManager.current.doorsLocked)
+        {
+            base.TryInteract();
+        }
+    }
+
     protected override void Interact()
     {
         ToggleState();

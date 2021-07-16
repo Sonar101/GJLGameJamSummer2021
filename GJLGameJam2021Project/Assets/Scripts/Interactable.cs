@@ -12,7 +12,7 @@ public class Interactable : MonoBehaviour
         LevelManager.current.onTryInteract += TryInteract;
     }
 
-    private void TryInteract()
+    protected virtual void TryInteract()
     {
         if(inRange)
         {
