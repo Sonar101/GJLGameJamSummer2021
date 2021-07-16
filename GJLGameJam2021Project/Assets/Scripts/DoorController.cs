@@ -45,8 +45,7 @@ public class DoorController : Interactable
 
     protected override void Interact()
     {
-        if (base.inRange)
-            ToggleState();
+        ToggleState();
     }
 
     void ButtonOpen(int id)

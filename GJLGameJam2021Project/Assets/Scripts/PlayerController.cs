@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private void LevelInteract()
     {
-        LevelManager.current.Interact();
+        LevelManager.current.TryInteract();
     }
 
     Vector2 GetMouseDirection()

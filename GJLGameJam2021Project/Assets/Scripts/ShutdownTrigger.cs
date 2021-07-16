@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueTrigger : LevelTrigger
+public class ShutdownTrigger : LevelTrigger
 {
-    public Dialogue dialogue;
-
     protected override void Trigger()
     {
-        LevelManager.current.TriggerDialogue(dialogue);
+        LevelManager.current.CloseAllDoors();
+        Debug.Log("Shutting down");
     }
 }
