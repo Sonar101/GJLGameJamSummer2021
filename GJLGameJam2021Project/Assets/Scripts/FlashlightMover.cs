@@ -32,7 +32,7 @@ public class FlashlightMover : MonoBehaviour
         flashlight.transform.localPosition = mouseDirClamp;
 
         // Flip player sprite based on flashlight position
-        print(mouseDirClamp);
+        //print(mouseDirClamp);
         if (mouseDirClamp.x >= 0) {
             // facing right
             sr.flipX = true;
