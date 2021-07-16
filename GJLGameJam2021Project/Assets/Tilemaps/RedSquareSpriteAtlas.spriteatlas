@@ -33,7 +33,8 @@ SpriteAtlas:
     packables:
     - {fileID: 2800000, guid: 343bb18dbc25662498ec0209d38ebd42, type: 3}
     - {fileID: 2800000, guid: 43f4e12fd674c634884c78e57a3adbd3, type: 3}
-    totalSpriteSurfaceArea: 1406250
+    - {fileID: 2800000, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+    totalSpriteSurfaceArea: 3515625
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -45,6 +46,21 @@ SpriteAtlas:
   - {fileID: 4469199713427763389, guid: 343bb18dbc25662498ec0209d38ebd42, type: 3}
   - {fileID: 8930223544854763202, guid: 343bb18dbc25662498ec0209d38ebd42, type: 3}
   - {fileID: -4747734334717340696, guid: 343bb18dbc25662498ec0209d38ebd42, type: 3}
+  - {fileID: 6973908831645225586, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: 3249201179051110394, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: -1030669046328538241, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: -856651425207637379, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: 6006364623088969702, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: -370766235941592694, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: 6933636073406880148, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: 6897865978258649127, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: -6677581022476608722, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: 6622751970350858757, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: 2072342836747120190, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: 1090286479108945052, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: 353150683131460776, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: -7106603084303052736, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
+  - {fileID: 61648828706249842, guid: 58ca90be0a85f19459b23e589adbd4db, type: 3}
   - {fileID: -7833723995462509865, guid: 43f4e12fd674c634884c78e57a3adbd3, type: 3}
   - {fileID: 6255349861630755287, guid: 43f4e12fd674c634884c78e57a3adbd3, type: 3}
   - {fileID: -7596813338507672985, guid: 43f4e12fd674c634884c78e57a3adbd3, type: 3}
@@ -56,6 +72,21 @@ SpriteAtlas:
   - TestTileMap_3
   - TestTileMap_0
   - TestTileMap_1
+  - TileMap_TopCropped_14
+  - TileMap_TopCropped_10
+  - TileMap_TopCropped_11
+  - TileMap_TopCropped_12
+  - TileMap_TopCropped_13
+  - TileMap_TopCropped_9
+  - TileMap_TopCropped_8
+  - TileMap_TopCropped_5
+  - TileMap_TopCropped_4
+  - TileMap_TopCropped_7
+  - TileMap_TopCropped_6
+  - TileMap_TopCropped_1
+  - TileMap_TopCropped_0
+  - TileMap_TopCropped_3
+  - TileMap_TopCropped_2
   - TestSpritesheet_0
   - TestSpritesheet_1
   - TestSpritesheet_2
