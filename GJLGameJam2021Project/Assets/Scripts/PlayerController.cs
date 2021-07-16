@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,6 +55,16 @@ public class PlayerController : MonoBehaviour
             else
                 StopCoroutine(flashlightDrainCharge);
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            LevelInteract();
+        }
+    }
+
+    private void LevelInteract()
+    {
+        LevelManager.current.Interact();
     }
 
     Vector2 GetMouseDirection()
