@@ -46,6 +46,7 @@ public class LevelManager : MonoBehaviour
     public event Action onTryInteract;
     public void TryInteract()
     {
+        //Debug.Log("Manager Interact");
         if (onTryInteract != null)
             onTryInteract();
     }
