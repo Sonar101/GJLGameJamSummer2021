@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private void LevelInteract()
     {
+        //Debug.Log("Player Interact");
         LevelManager.current.TryInteract();
     }
 
