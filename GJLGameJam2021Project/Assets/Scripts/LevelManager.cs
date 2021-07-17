@@ -7,10 +7,20 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager current;
     public bool doorsLocked = false;
+    public Vector2 checkPoint;
 
     void Awake()
     {
-        current = this;
+        if(current == null)
+        {
+            current = this;
+            DontDestroyOnLoad(current);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     public event Action<int> onButtonPress;
