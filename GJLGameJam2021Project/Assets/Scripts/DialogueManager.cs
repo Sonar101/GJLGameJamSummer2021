@@ -16,6 +16,11 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator currCeoCoroutine;
     private IEnumerator currSelfCoroutine;
 
+    private void Start()
+    {
+        LevelManager.current.onTriggerDialogue += parseDialog;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -26,6 +31,17 @@ public class DialogueManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             openAndWriteSelfText("Oh boy look at me I'm self text thank goodness you created me");
+        }
+    }
+
+    void parseDialog (Dialogue dialogue)
+    {
+        if (dialogue.dialogueType == DialogueType.CEO)
+        {
+            openAndWriteCeoText(dialogue.sentence);
+        } else if (dialogue.dialogueType == DialogueType.MONOLOGUE)
+        {
+            openAndWriteSelfText(dialogue.sentence);
         }
     }
 
@@ -85,5 +101,10 @@ public class DialogueManager : MonoBehaviour
     private void closeSelfText()
     {
         selfTextAnimator.SetBool("IsOpen", false);
+    }
+
+    private void onDestroy()
+    {
+        LevelManager.current.onTriggerDialogue -= parseDialog;
     }
 }
