@@ -21,19 +21,6 @@ public class DialogueManager : MonoBehaviour
         LevelManager.current.onTriggerDialogue += parseDialog;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            openAndWriteCeoText("Hi text, I'm dad I'm so happy to finally meet you I just wanted to add a lot of text to test the amount of time it takes to put text on the screen");
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            openAndWriteSelfText("Oh boy look at me I'm self text thank goodness you created me");
-        }
-    }
-
     void parseDialog (Dialogue dialogue)
     {
         if (dialogue.dialogueType == DialogueType.CEO)
