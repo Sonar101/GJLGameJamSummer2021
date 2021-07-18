@@ -26,7 +26,7 @@ public class CameraMover : MonoBehaviour
         Vector3 camTarget = new Vector3(mouseDirClamp.x + playerPos.x, mouseDirClamp.y + playerPos.y, cam.transform.position.z);
 
         if (Time.timeScale != 0) { 
-        cam.transform.position = Vector3.Lerp(cam.transform.position, camTarget, lerpRate);
+            cam.transform.position = Vector3.Lerp(cam.transform.position, camTarget, lerpRate);
         }
     }
 
