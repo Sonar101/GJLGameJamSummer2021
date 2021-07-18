@@ -6,8 +6,9 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager current;
-    public bool doorsLocked = false;
     public Vector2 checkPoint;
+
+    public GameObject[] tentacles;
 
     void Awake()
     {
@@ -27,7 +28,7 @@ public class LevelManager : MonoBehaviour
     public void ButtonPress(int id)
     {
         if (onButtonPress != null)
-            onButtonPress(id);
+            onButtonPress.Invoke(id);
     }
 
     public event Action onCloseAllDoors;
@@ -39,8 +40,18 @@ public class LevelManager : MonoBehaviour
 
         if (onCameraRumble != null)
             onCameraRumble();
+    }
 
-        doorsLocked = true;
+    public event Action onDestroyBlackBox;
+    public void DestroyBlackBox()
+    {
+        if (onDestroyBlackBox != null)
+            onDestroyBlackBox();
+
+        foreach(GameObject tentacle in tentacles)
+        {
+            tentacle.SetActive(true);
+        }
     }
 
     public event Action onTryInteract;

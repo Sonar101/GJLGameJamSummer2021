@@ -42,7 +42,7 @@ public class DoorController : Interactable
 
     void ToggleState()
     {
-        openSFX.Play();
+        //openSFX.Play();
         open = !open;
     }
 

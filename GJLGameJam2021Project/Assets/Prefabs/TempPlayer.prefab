@@ -69,7 +69,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 3956633646223806961, guid: 91d929021152a424bae918a471af8ec1, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 0.025
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -399,7 +399,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 3956633646223806961, guid: 91d929021152a424bae918a471af8ec1, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6047,8 +6047,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0542244, y: -0.32424366}
-  m_Size: {x: 0.7857756, y: 2.3184874}
+  m_Offset: {x: 0.0542244, y: -0.05}
+  m_Size: {x: 0.64, y: 1.56}
   m_Direction: 0
 --- !u!114 &4987587164348496360
 MonoBehaviour:
