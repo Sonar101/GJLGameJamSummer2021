@@ -18,9 +18,9 @@ public class FlareBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        psFlare = GetComponent<ParticleSystem>();
+        psFlare = GetComponentInChildren<ParticleSystem>();
         psSmoke = GetComponentInChildren<ParticleSystem>();
-        lightFlare = GetComponent<Light2D>();
+        lightFlare = GetComponentInChildren<Light2D>();
 
         lightIntensity = lightFlare.intensity;
 
