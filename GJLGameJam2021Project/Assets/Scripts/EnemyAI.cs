@@ -17,6 +17,7 @@ public class EnemyAI : MonoBehaviour
     {
         //connect tentacle tip to an invisible object that moves around inside a circle
         rb = GetComponent<Rigidbody2D>();
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -25,7 +26,6 @@ public class EnemyAI : MonoBehaviour
         Vector3 displacement = Player.position - transform.position;
         displacement = displacement.normalized;
         timeLeft -= Time.deltaTime;
-
 
         //check distance of player and tentacle tip
         if (Vector2.Distance(Player.position, transform.position) < maxDistance)

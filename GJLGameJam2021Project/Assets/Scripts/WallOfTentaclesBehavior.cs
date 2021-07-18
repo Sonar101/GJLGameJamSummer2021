@@ -11,13 +11,14 @@ public class WallOfTentaclesBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 position = transform.position;
+        
         
         //Vector3 dist = Player.position - transform.position;
         if (Vector2.Distance(Player.position, transform.position) < maxDistance)

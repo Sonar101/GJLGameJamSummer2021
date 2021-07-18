@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  maxDistance: 15
-  slowSpeed: 0.009
+  maxDistance: 17
+  slowSpeed: 0.0009
   maxSpeed: 0.02
 --- !u!212 &6516957323592787725
 SpriteRenderer:
