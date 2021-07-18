@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RespawnManager : MonoBehaviour
 {
-    private Movement movement;
+    private PlayerController pc;
     private RespawnScreenFader screenFader;
     private bool playerIsRespawning = false;
     public GameObject screenFaderPrefab;
@@ -13,7 +13,7 @@ public class RespawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movement = GetComponent<Movement>();
+        pc = GetComponent<PlayerController>();
         screenFader = Instantiate(screenFaderPrefab).GetComponent<RespawnScreenFader>();
         screenFader.setRespawnManager(this);
     }
@@ -29,7 +29,7 @@ public class RespawnManager : MonoBehaviour
 
     public void startPlayerDeath()
     {
-        // disable player movement input
+        pc.setDeath(true);
         // initiate bubble particle effect
         print("Should stop player movement and trigger bubble particle effect");
         screenFader.FadeOutForRespawn();
@@ -41,6 +41,7 @@ public class RespawnManager : MonoBehaviour
             print("Need to set respawn location; not repositioning player");
         } else {
             transform.position = respawnLocation.position;
+            pc.setDeath(false);
             Camera.main.transform.position = new Vector3(respawnLocation.position.x, respawnLocation.position.y, Camera.main.transform.position.z);
         }
 

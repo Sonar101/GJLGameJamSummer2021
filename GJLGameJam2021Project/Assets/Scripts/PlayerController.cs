@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public int curFlareNum = 0;
 
     private const float timestep = 0.1f;
+    private bool dead = false;
 
     private Movement moveController;
     private FlareThrowBehavior flareThrowBehavior;
@@ -36,6 +37,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!dead)
+        {
+            normalInput();
+        }
+    }
+
+    private void normalInput()
+    {
         Vector2 moveDirection = GetInputDirection();
 
         if (moveDirection != Vector2.zero)
@@ -50,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && curFlashlightCharge > 0)
         {
-            if(flashlightController.ToggleFlashlight())
+            if (flashlightController.ToggleFlashlight())
                 flashlightDrainCharge = StartCoroutine(DrainCharge());
             else
                 StopCoroutine(flashlightDrainCharge);
@@ -117,6 +126,11 @@ public class PlayerController : MonoBehaviour
             curFlareNum += 1;
             Destroy(collision.gameObject);
         }
+    }
+
+    public void setDeath(bool input)
+    {
+        dead = input;
     }
 
 }
