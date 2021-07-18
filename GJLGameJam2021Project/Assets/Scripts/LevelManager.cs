@@ -9,6 +9,11 @@ public class LevelManager : MonoBehaviour
     public Vector2 checkPoint;
 
     public GameObject[] tentacles;
+    public GameObject deathplane;
+    public DeathplaneTrigger deathplaneTrigger;
+    public Transform deathplanePosition;
+
+    private GameObject deathplaneInstance;
 
     void Awake()
     {
@@ -42,12 +47,8 @@ public class LevelManager : MonoBehaviour
             onCameraRumble();
     }
 
-    public event Action onDestroyBlackBox;
     public void DestroyBlackBox()
     {
-        if (onDestroyBlackBox != null)
-            onDestroyBlackBox();
-
         foreach(GameObject tentacle in tentacles)
         {
             tentacle.SetActive(true);
@@ -69,5 +70,16 @@ public class LevelManager : MonoBehaviour
             onTriggerDialogue(dialogue);
 
         Debug.Log(dialogue.sentence);
+    }
+
+    public void DeathplaneTrigger()
+    {
+        deathplaneInstance = Instantiate(deathplane, deathplanePosition.position, Quaternion.identity);
+    }
+
+    public void DeathplaneReset()
+    {
+        Destroy(deathplaneInstance);
+        deathplaneTrigger.resetTrigger();
     }
 }

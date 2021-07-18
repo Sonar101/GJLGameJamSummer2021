@@ -23,4 +23,7 @@ public class LevelTrigger : MonoBehaviour
             }
         }
     }
+
+    public void resetTrigger() { hasTriggered = false; }
+
 }
