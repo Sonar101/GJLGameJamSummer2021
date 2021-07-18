@@ -50,14 +50,14 @@ public class PlayerController : MonoBehaviour
         if (moveDirection != Vector2.zero)
             moveController.Accelerate(moveDirection);
 
-        if (Input.GetMouseButtonDown(0) && curFlareNum > 0)
+        if (Input.GetMouseButtonDown(0) && curFlareNum > 0 && Time.timeScale != 0)
         {
             flareThrowBehavior.ThrowFlare(GetMouseDirection());
             curFlareNum--;
             // some sort of update UI function...
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && curFlashlightCharge > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && curFlashlightCharge > 0 && Time.timeScale != 0)
         {
             if (flashlightController.ToggleFlashlight())
                 flashlightDrainCharge = StartCoroutine(DrainCharge());

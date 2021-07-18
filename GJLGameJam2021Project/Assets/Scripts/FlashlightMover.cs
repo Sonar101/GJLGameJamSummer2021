@@ -24,31 +24,33 @@ public class FlashlightMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Calculate flashlight position 
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 mouseDir = new Vector3(mousePos.x - transform.position.x, mousePos.y - transform.position.y, 0);
-        Vector3 mouseDirClamp = Vector3.ClampMagnitude(mouseDir, maxDistanceFromJoint);
+        if (Time.timeScale != 0) {
+            // Calculate flashlight position 
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 mouseDir = new Vector3(mousePos.x - transform.position.x, mousePos.y - transform.position.y, 0);
+            Vector3 mouseDirClamp = Vector3.ClampMagnitude(mouseDir, maxDistanceFromJoint);
 
-        flashlight.transform.localPosition = mouseDirClamp;
+            flashlight.transform.localPosition = mouseDirClamp;
 
-        // Flip player sprite based on flashlight position
-        if (mouseDirClamp.x >= 0) {
-            // facing right
-            sr.flipX = true;
-            flashlightSprite.flipX = true;
-            flashlight.transform.localPosition += new Vector3(jointDistanceFromBody, 0, 0);
+            // Flip player sprite based on flashlight position
+            if (mouseDirClamp.x >= 0) {
+                // facing right
+                sr.flipX = true;
+                flashlightSprite.flipX = true;
+                flashlight.transform.localPosition += new Vector3(jointDistanceFromBody, 0, 0);
+            }
+            else
+            {
+                // facing left
+                sr.flipX = false;
+                flashlightSprite.flipX = false;
+                flashlight.transform.localPosition -= new Vector3(jointDistanceFromBody, 0, 0);
+            }
+
+            // Rotate flashlight
+            Vector2 mouseDirNorm = new Vector2(mouseDir.x, mouseDir.y).normalized;
+            flashlight.transform.rotation = RotateToDirection(mouseDirNorm);
         }
-        else
-        {
-            // facing left
-            sr.flipX = false;
-            flashlightSprite.flipX = false;
-            flashlight.transform.localPosition -= new Vector3(jointDistanceFromBody, 0, 0);
-        }
-
-        // Rotate flashlight
-        Vector2 mouseDirNorm = new Vector2(mouseDir.x, mouseDir.y).normalized;
-        flashlight.transform.rotation = RotateToDirection(mouseDirNorm);
     }
 
     Vector2 GetMouseWorldSpaceDirection()

@@ -25,7 +25,9 @@ public class CameraMover : MonoBehaviour
         Vector2 mouseDirClamp = Vector2.ClampMagnitude(mouseDir, camTargetDistance) / screenVecRatio;
         Vector3 camTarget = new Vector3(mouseDirClamp.x + playerPos.x, mouseDirClamp.y + playerPos.y, cam.transform.position.z);
 
+        if (Time.timeScale != 0) { 
         cam.transform.position = Vector3.Lerp(cam.transform.position, camTarget, lerpRate);
+        }
     }
 
     Vector2 GetMouseScreenSpaceDirection()
