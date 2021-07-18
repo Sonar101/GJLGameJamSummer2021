@@ -6,7 +6,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 public class ProximityGlow : MonoBehaviour
 {
     private Transform playerTransform;
-    private Light2D light;
+    private Light2D greenLight;
     public float maxDistance = 3f;
     public float maxIntensity = .83f;
     public float lerpRate = .5f;
@@ -15,7 +15,7 @@ public class ProximityGlow : MonoBehaviour
     void Start()
     {
         playerTransform = GetComponentInParent<EnemyAI>().Player;
-        light = GetComponent<Light2D>();
+        greenLight = GetComponent<Light2D>();
     }
 
     // Update is called once per frame
@@ -23,11 +23,11 @@ public class ProximityGlow : MonoBehaviour
     {
         if (Vector2.Distance(playerTransform.position, transform.position) < maxDistance)
         {
-            light.intensity = Mathf.Lerp(light.intensity, maxIntensity, lerpRate);
+            greenLight.intensity = Mathf.Lerp(greenLight.intensity, maxIntensity, lerpRate);
         }
         else
         {
-            light.intensity = Mathf.Lerp(light.intensity, 0f, lerpRate);
+            greenLight.intensity = Mathf.Lerp(greenLight.intensity, 0f, lerpRate);
         }
     }
 }

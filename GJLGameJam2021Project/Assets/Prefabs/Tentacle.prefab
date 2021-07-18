@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 4556246713807262505}
   m_Layer: 0
   m_Name: tntcl_head
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +383,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.46}
-  m_ConnectedAnchor: {x: 0, y: -0.3591701}
+  m_ConnectedAnchor: {x: 0, y: -0.35916215}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -512,7 +512,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.51}
-  m_ConnectedAnchor: {x: 0, y: -0.35076323}
+  m_ConnectedAnchor: {x: 0, y: -0.3507644}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -641,7 +641,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.46}
-  m_ConnectedAnchor: {x: 0, y: -0.3591593}
+  m_ConnectedAnchor: {x: 0, y: -0.359162}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -770,7 +770,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.46}
-  m_ConnectedAnchor: {x: -0.05691685, y: -0.99481463}
+  m_ConnectedAnchor: {x: -0.056916147, y: -0.99480295}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1010,7 +1010,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.37}
-  m_ConnectedAnchor: {x: 0, y: -0.33672568}
+  m_ConnectedAnchor: {x: 0, y: -0.33673206}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1140,7 +1140,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.36}
-  m_ConnectedAnchor: {x: 0, y: -0.46140602}
+  m_ConnectedAnchor: {x: -0.00000029011642, y: -0.46142337}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1164,7 +1164,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: -0.33}
-  m_ConnectedAnchor: {x: 0.020000558, y: -0.15604597}
+  m_ConnectedAnchor: {x: 0.020000204, y: -0.15605305}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
