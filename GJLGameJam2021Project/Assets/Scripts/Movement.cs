@@ -9,11 +9,15 @@ public class Movement : MonoBehaviour
     public float acceleration = 0.05f;
     public float maxMoveSpeed = 1f;
     public float rotSpeed = 2.5f;
+
+    public AudioSource SwimLoopSFX;
+    public float swimVolumeMax = 0.25f;
         
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        StartCoroutine(SwimLoop());
     }
 
     // Update is called once per frame
@@ -37,5 +41,14 @@ public class Movement : MonoBehaviour
     {
         rb.velocity += Vector2.ClampMagnitude(moveDir * acceleration,
                                               acceleration);
+    }
+
+    private IEnumerator SwimLoop()
+    {
+        while (true)
+        {
+            SwimLoopSFX.volume = swimVolumeMax * rb.velocity.magnitude / maxMoveSpeed;
+            yield return null;
+        }
     }
 }
