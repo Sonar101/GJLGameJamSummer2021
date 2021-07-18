@@ -8,6 +8,8 @@ public class FlashlightController : MonoBehaviour
     public float maxIntensity = 0.5f;
     public float maxFlickerDuration = 0.2f;
 
+    public RandomAudioClip flickerSFX;
+
     float progress = 1;
     float flickerAmt = 1;
 
@@ -60,8 +62,10 @@ public class FlashlightController : MonoBehaviour
                 if (Random.value > Mathf.Pow(progress, 0.2f))
                 {
                     flickering = true;
+                    flickerSFX.playRandom();
                     yield return new WaitForSeconds(Random.value * maxFlickerDuration);
                     flickering = false;
+                    flickerSFX.stop();
                 }
             }
         }

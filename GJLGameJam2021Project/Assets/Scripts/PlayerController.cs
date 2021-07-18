@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
     public int maxFlareNum = 5;
     public int curFlareNum = 0;
 
+    [Header("SFX")]
+    public AudioSource flashlightButtonSFX;
+    public AudioSource pickupSFX;
+
     private const float timestep = 0.1f;
     private bool dead = false;
 
@@ -57,12 +61,15 @@ public class PlayerController : MonoBehaviour
             // some sort of update UI function...
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && curFlashlightCharge > 0 && Time.timeScale != 0)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (flashlightController.ToggleFlashlight())
-                flashlightDrainCharge = StartCoroutine(DrainCharge());
-            else
-                StopCoroutine(flashlightDrainCharge);
+            flashlightButtonSFX.Play();
+            if (curFlashlightCharge > 0 && Time.timeScale != 0) {
+                if (flashlightController.ToggleFlashlight())
+                    flashlightDrainCharge = StartCoroutine(DrainCharge());
+                else
+                    StopCoroutine(flashlightDrainCharge);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -123,6 +130,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Flare" && curFlareNum < 5)
         {
+            pickupSFX.Play();
             curFlareNum += 1;
             Destroy(collision.gameObject);
         }
