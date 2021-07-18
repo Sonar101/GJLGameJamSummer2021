@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Flare
   - Enemy
+  - Goal
   layers:
   - Default
   - TransparentFX
