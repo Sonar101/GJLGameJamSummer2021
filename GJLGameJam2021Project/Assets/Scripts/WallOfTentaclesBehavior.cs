@@ -5,7 +5,9 @@ using UnityEngine;
 public class WallOfTentaclesBehavior : MonoBehaviour
 {
     public Transform Player;
-    public float maxDistance = 100f;
+    public float maxDistance = 1;
+    public float slowSpeed = 0.001f;
+    public float maxSpeed = 0.2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +19,15 @@ public class WallOfTentaclesBehavior : MonoBehaviour
     {
         Vector3 position = transform.position;
         
-        float dist = Player.transform.position.y - transform.position.y;
-        if (dist < maxDistance)
+        //Vector3 dist = Player.position - transform.position;
+        if (Vector2.Distance(Player.position, transform.position) < maxDistance)
         {
-            position.y += 0.01f;
+            position.y += slowSpeed;
             transform.position = position;
         }
-        else if(dist > maxDistance)
+        else if(Vector2.Distance(Player.position, transform.position) > maxDistance)
         {
-            position.y += 0.02f;
+            position.y += maxSpeed;
             transform.position = position;
         }
     }

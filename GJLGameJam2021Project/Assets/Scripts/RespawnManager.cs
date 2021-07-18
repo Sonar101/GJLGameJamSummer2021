@@ -27,6 +27,15 @@ public class RespawnManager : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy") && !playerIsRespawning)
+        {
+            startPlayerDeath();
+            playerIsRespawning = true;
+        }
+    }
+
     public void startPlayerDeath()
     {
         pc.setDeath(true);
