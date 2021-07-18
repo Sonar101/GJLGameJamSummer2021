@@ -5670,8 +5670,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 3956633646223806961, guid: 91d929021152a424bae918a471af8ec1, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1f090802b4dd9491bb058acc3a9755cd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.15
-  m_Pitch: 1
+  m_Volume: 0.05
+  m_Pitch: 0.68
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -6066,6 +6066,7 @@ MonoBehaviour:
   maxMoveSpeed: 3
   rotSpeed: 2.5
   SwimLoopSFX: {fileID: 3800126593988107616}
+  swimVolumeMax: 0.25
 --- !u!114 &1322225005
 MonoBehaviour:
   m_ObjectHideFlags: 0

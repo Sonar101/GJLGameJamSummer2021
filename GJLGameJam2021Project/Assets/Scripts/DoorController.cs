@@ -10,6 +10,8 @@ public class DoorController : Interactable
 
     public int doorID = -1;
 
+    public AudioSource openSFX;
+
     Vector3 closedRotation;
     Vector3 openRotation;
 
@@ -40,6 +42,7 @@ public class DoorController : Interactable
 
     void ToggleState()
     {
+        openSFX.Play();
         open = !open;
     }
 
@@ -50,6 +53,7 @@ public class DoorController : Interactable
 
     void ButtonOpen(int id)
     {
+        openSFX.Play();
         if (doorID == id)
             open = true;
     }
