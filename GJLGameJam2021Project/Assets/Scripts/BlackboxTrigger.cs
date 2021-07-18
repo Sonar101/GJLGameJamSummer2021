@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BlackboxTrigger : Interactable
 {
-    public AudioSource pickupSFX;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -14,7 +13,6 @@ public class BlackboxTrigger : Interactable
 
     protected override void Interact()
     {
-        pickupSFX?.PlayOneShot(pickupSFX.clip);
         LevelManager.current.DestroyBlackBox();
         Destroy(gameObject);
     }

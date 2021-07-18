@@ -13,6 +13,9 @@ public class LevelManager : MonoBehaviour
     public DeathplaneTrigger deathplaneTrigger;
     public Transform deathplanePosition;
 
+    public AudioSource roarSFX;
+    public AudioSource pickupSFX;
+
     private GameObject deathplaneInstance;
 
     void Awake()
@@ -53,6 +56,8 @@ public class LevelManager : MonoBehaviour
         {
             tentacle.SetActive(true);
         }
+        pickupSFX?.Play();
+        roarSFX?.Play();
     }
 
     public event Action onTryInteract;
