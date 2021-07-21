@@ -8,6 +8,7 @@ public class WallOfTentaclesBehavior : MonoBehaviour
     public float maxDistance = 1;
     public float slowSpeed = 0.001f;
     public float maxSpeed = 0.2f;
+    public float finalStretchSpeed = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,17 +19,28 @@ public class WallOfTentaclesBehavior : MonoBehaviour
     void Update()
     {
         Vector3 position = transform.position;
-        
-        
+
+
         //Vector3 dist = Player.position - transform.position;
+        /*
         if (Vector2.Distance(Player.position, transform.position) < maxDistance)
         {
             position.y += slowSpeed;
             transform.position = position;
         }
+        */
+        position.y += slowSpeed;
+        transform.position = position;
+        /*
         else if(Vector2.Distance(Player.position, transform.position) > maxDistance)
         {
             position.y += maxSpeed;
+            transform.position = position;
+        }
+        */
+        if (Player.position.y >= -15f)
+        {
+            position.y += finalStretchSpeed;
             transform.position = position;
         }
     }

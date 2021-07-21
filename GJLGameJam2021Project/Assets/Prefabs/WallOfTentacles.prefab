@@ -1,5 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!232 &4798546856274858107
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998860574354404487}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -15.504895, y: -104.39291}
+  m_AutoConfigureDistance: 1
+  m_Distance: 3.7307556
+  m_MaxDistanceOnly: 0
+--- !u!232 &7126223943270961404
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998860575541694182}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -13.875569, y: -104.59309}
+  m_AutoConfigureDistance: 1
+  m_Distance: 4.521213
+  m_MaxDistanceOnly: 0
 --- !u!1 &6516957323592787727
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,9 +136,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  maxDistance: 17
-  slowSpeed: 0.0007
+  maxDistance: 0
+  slowSpeed: 0.002
   maxSpeed: 0.0025
+  finalStretchSpeed: 0.01
 --- !u!212 &6516957323592787725
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -289,6 +328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (98)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 56.052998
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 56.15591
@@ -410,6 +453,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 29.051582
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -533,6 +580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (111)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 71.22173
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 71.231
@@ -654,6 +705,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 12.93019
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -777,6 +832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 23.80768
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 24.280228
@@ -899,12 +958,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 7.7790704
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 9.332686
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+--- !u!1 &1998860575541694182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+  m_PrefabInstance: {fileID: 6516957322584893898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1998860575541694176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4741590235438098218, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
@@ -1020,6 +1088,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (105)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 43.472904
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -1143,6 +1215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (90)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 50.853928
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 50.93775
@@ -1264,6 +1340,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 21.00607
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -1387,6 +1467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (107)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 47.7396
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 47.88656
@@ -1508,6 +1592,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (102)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 66.3897
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -1631,6 +1719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (104)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 40.38651
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 40.57297
@@ -1752,6 +1844,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 8.706029
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -1875,6 +1971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 42.402428
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 42.571636
@@ -1996,6 +2096,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 20.38027
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -2119,6 +2223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (93)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 61.535366
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 61.608673
@@ -2240,6 +2348,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 26.631298
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -2363,6 +2475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 16.582026
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 17.244085
@@ -2484,6 +2600,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 30.158005
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -2607,6 +2727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (108)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 53.04629
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 53.140488
@@ -2728,6 +2852,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (95)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 44.923855
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -2851,6 +2979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 36.17337
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 36.382637
@@ -2972,6 +3104,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 18.846437
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -3095,6 +3231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 17.39075
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 17.998085
@@ -3216,6 +3356,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (101)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 62.773724
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -3339,6 +3483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (100)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 59.62035
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 59.71449
@@ -3460,6 +3608,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 33.872482
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -3583,6 +3735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (109)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 54.402466
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 54.51386
@@ -3704,6 +3860,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 22.042536
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -3827,6 +3987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 14.639274
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 15.463951
@@ -3948,6 +4112,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (106)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 46.061745
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -4071,6 +4239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 34.880314
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 35.06347
@@ -4192,6 +4364,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (99)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 57.960587
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -4315,6 +4491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 10.34796
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 11.450535
@@ -4437,6 +4617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 56.955006
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 57.022026
@@ -4486,6 +4670,10 @@ PrefabInstance:
     - target: {fileID: 4741590234547767814, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -0.15605433
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741590234547767814, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4741590234547767817, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -4558,6 +4746,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 8.7942505
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -4681,6 +4873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (110)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 65.23382
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 65.27467
@@ -4802,6 +4998,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (96)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 49.762516
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -4925,6 +5125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (97)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 52.115326
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 52.219852
@@ -5046,6 +5250,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 37.566246
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -5169,6 +5377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 31.877975
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 32.16421
@@ -5290,6 +5502,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 72.456924
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -5413,6 +5629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (81)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 25.560265
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 25.958496
@@ -5534,6 +5754,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (113)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 70.06991
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -5657,12 +5881,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 6.4134164
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 8.068507
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+--- !u!1 &1998860574354404487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+  m_PrefabInstance: {fileID: 6516957324049044395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1998860574354404481 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4741590235438098218, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
@@ -5778,6 +6011,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 64.02264
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -5901,6 +6138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 27.962845
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 28.310715
@@ -6023,6 +6264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 11.137729
+      objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
       value: 12.123292
@@ -6144,6 +6389,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (103)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 38.696648
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -6279,7 +6528,8 @@ PrefabInstance:
       propertyPath: maxDistance
       value: 150
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
 --- !u!4 &1998860574082709461 stripped
 Transform:
@@ -6396,6 +6646,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 15.188881
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
@@ -6518,6 +6772,10 @@ PrefabInstance:
     - target: {fileID: 4741590235438098220, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Name
       value: Tentacle (112)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912539705282135765, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
+      propertyPath: m_Distance
+      value: 68.03297
       objectReference: {fileID: 0}
     - target: {fileID: 4979654315696795439, guid: 4239b33d47a53754387eab91cd87d73d, type: 3}
       propertyPath: m_Distance
