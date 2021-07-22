@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     public GameObject deathplane;
     public DeathplaneTrigger deathplaneTrigger;
     public Transform deathplanePosition;
+    public GameObject resurfaceHitbox;
 
     public AudioSource roarSFX;
     public AudioSource pickupSFX;
@@ -58,6 +59,7 @@ public class LevelManager : MonoBehaviour
         }
         pickupSFX?.Play();
         roarSFX?.Play();
+        resurfaceHitbox.active = true;
     }
 
     public event Action onTryInteract;

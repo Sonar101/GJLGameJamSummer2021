@@ -5,19 +5,18 @@ using UnityEngine;
 public class FlashlightMover : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private SpriteRenderer sr;
-    private SpriteRenderer flashlightSprite;
+    public SpriteRenderer torsoSprite;
+    public SpriteRenderer flashlightSprite;
     public GameObject flashlight;
-    public float jointDistanceFromBody = .3f;
-    public float maxDistanceFromJoint = 10f;
+    public float jointOffsetX = .3f;
+    public float jointOffsetY = -.1f;
+    public float maxDistanceFromJoint = .5f;
     public bool makeMouseInvisible = false;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
-        flashlightSprite = flashlight.gameObject.GetComponentInChildren<SpriteRenderer>();
         if (makeMouseInvisible) Cursor.visible = false;
     }
 
@@ -35,16 +34,16 @@ public class FlashlightMover : MonoBehaviour
             // Flip player sprite based on flashlight position
             if (mouseDirClamp.x >= 0) {
                 // facing right
-                sr.flipX = true;
+                torsoSprite.flipX = true;
                 flashlightSprite.flipX = true;
-                flashlight.transform.localPosition += new Vector3(jointDistanceFromBody, 0, 0);
+                flashlight.transform.localPosition += new Vector3(jointOffsetX, jointOffsetY, 0);
             }
             else
             {
                 // facing left
-                sr.flipX = false;
+                torsoSprite.flipX = false;
                 flashlightSprite.flipX = false;
-                flashlight.transform.localPosition -= new Vector3(jointDistanceFromBody, 0, 0);
+                flashlight.transform.localPosition += new Vector3(-jointOffsetX, jointOffsetY, 0);
             }
 
             // Rotate flashlight
