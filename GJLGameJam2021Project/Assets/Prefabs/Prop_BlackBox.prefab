@@ -112,4 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb7f4be956624557a663148cf46522e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupSFX: {fileID: 0}
+  part1Destroy: {fileID: 21300000, guid: 4cb65b87af1c248468c61e7ea80c5692, type: 3}
+  part2Destroy: {fileID: 21300000, guid: ead24b6ed79173f4a88adf0c89a1fa1c, type: 3}
+  part3Destroy: {fileID: 21300000, guid: 658de73ab5d79074a83d8f7f2bacd2b1, type: 3}
