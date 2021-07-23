@@ -19,6 +19,7 @@ public class LevelManager : MonoBehaviour
     public AudioSource pickupSFX;
 
     private GameObject deathplaneInstance;
+    private bool blackBoxBroken = false;
 
     void Awake()
     {
@@ -54,7 +55,8 @@ public class LevelManager : MonoBehaviour
 
     public void DestroyBlackBox()
     {
-        foreach(GameObject tentacle in tentacles)
+        blackBoxBroken = true;
+        foreach (GameObject tentacle in tentacles)
         {
             tentacle.SetActive(true);
         }
@@ -90,5 +92,10 @@ public class LevelManager : MonoBehaviour
     {
         Destroy(deathplaneInstance);
         deathplaneTrigger.resetTrigger();
+    }
+
+    public bool GetBlackBoxBroken()
+    {
+        return blackBoxBroken;
     }
 }
