@@ -6099,7 +6099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenFaderPrefab: {fileID: 663251226008827499, guid: a346d936024229f4f89f351794a093f2, type: 3}
-  respawnLocation: {fileID: 0}
+  respawnLocation: {fileID: 3197281078941497080, guid: e823f87fccb4de2468e36e5a436ae736, type: 3}
 --- !u!114 &6217351344032528189
 MonoBehaviour:
   m_ObjectHideFlags: 0
