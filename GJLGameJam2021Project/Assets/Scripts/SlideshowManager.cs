@@ -14,6 +14,14 @@ public class SlideshowManager : MonoBehaviour
         StartCoroutine(RunThroughSlides());
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
     IEnumerator RunThroughSlides()
     {
         foreach (Animator anim in animators)
