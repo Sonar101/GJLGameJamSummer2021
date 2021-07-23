@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
     {
         curPlayerHealth = maxPlayerHealth;
         curFlashlightCharge = maxFlashlightCharge;
-        curFlareNum = maxFlareNum;
 
         moveController = GetComponent<Movement>();
         flareThrowBehavior = GetComponent<FlareThrowBehavior>();

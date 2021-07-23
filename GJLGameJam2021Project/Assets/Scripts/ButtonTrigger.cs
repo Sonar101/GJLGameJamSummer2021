@@ -6,6 +6,7 @@ public class ButtonTrigger : Interactable
 {
     public int buttonID = -1;
     public AudioSource buttonPressSFX;
+    public Animator leverAnim;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -15,8 +16,12 @@ public class ButtonTrigger : Interactable
 
     protected override void Interact()
     {
-        buttonPressSFX?.Play();
-        LevelManager.current.ButtonPress(buttonID);
+        if (LevelManager.current.GetBlackBoxBroken())
+        {
+            buttonPressSFX?.Play();
+            leverAnim.SetBool("LeverOn", true);
+            LevelManager.current.ButtonPress(buttonID);
+        }
     }
 
     protected override void OnDestroy()
