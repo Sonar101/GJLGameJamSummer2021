@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     public DeathplaneTrigger deathplaneTrigger;
     public Transform deathplanePosition;
     public GameObject resurfaceHitbox;
+    public SquidLightReveal squidRevealObj;
 
     public AudioSource roarSFX;
     public AudioSource pickupSFX;
@@ -59,7 +60,8 @@ public class LevelManager : MonoBehaviour
         }
         pickupSFX?.Play();
         roarSFX?.Play();
-        resurfaceHitbox.active = true;
+        squidRevealObj.StartRevealCoroutine();
+        resurfaceHitbox.SetActive(true);
     }
 
     public event Action onTryInteract;
