@@ -14,6 +14,10 @@ public class LevelManager : MonoBehaviour
     public Transform deathplanePosition;
     public GameObject resurfaceHitbox;
     public SquidLightReveal squidRevealObj;
+    public GameObject leftInvisbleWallText;
+    public GameObject rightInvisbleWallText;
+    public GameObject leftInvisbleWallTextAfterBlackBox;
+    public GameObject rightInvisbleWallTextAfterBlackBox;
 
     public AudioSource roarSFX;
     public AudioSource pickupSFX;
@@ -64,6 +68,10 @@ public class LevelManager : MonoBehaviour
         roarSFX?.Play();
         squidRevealObj.StartRevealCoroutine();
         resurfaceHitbox.SetActive(true);
+        leftInvisbleWallText.SetActive(false);
+        rightInvisbleWallText.SetActive(false);
+        leftInvisbleWallTextAfterBlackBox.SetActive(true);
+        rightInvisbleWallTextAfterBlackBox.SetActive(true);
     }
 
     public event Action onTryInteract;
