@@ -14,14 +14,6 @@ public class SlideshowManager : MonoBehaviour
         StartCoroutine(RunThroughSlides());
     }
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-    }
-
     IEnumerator RunThroughSlides()
     {
         foreach (Animator anim in animators)
@@ -30,5 +22,10 @@ public class SlideshowManager : MonoBehaviour
             yield return new WaitForSecondsRealtime(timeBetweenSlides);
         }
         SceneManager.LoadScene("LevelDesignTestScene", LoadSceneMode.Single);
+    }
+
+    public void skip()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
