@@ -12,6 +12,7 @@ public class ButtonTrigger : Interactable
     protected override void Start()
     {
         base.Start();
+        LevelManager.current.onCloseAllSwitches += CloseSwitch;
     }
 
     protected override void Interact()
@@ -22,6 +23,11 @@ public class ButtonTrigger : Interactable
             leverAnim.SetBool("LeverOn", true);
             LevelManager.current.ButtonPress(buttonID);
         }
+    }
+
+    protected void CloseSwitch()
+    {
+        leverAnim.SetBool("LeverOn", false);
     }
 
     protected override void OnDestroy()
