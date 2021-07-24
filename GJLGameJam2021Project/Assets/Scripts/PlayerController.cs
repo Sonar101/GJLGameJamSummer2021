@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private Movement moveController;
     private FlareThrowBehavior flareThrowBehavior;
     private FlashlightController flashlightController;
+    private Animator playerAnim;
 
     Coroutine flashlightDrainCharge;
 
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
         moveController = GetComponent<Movement>();
         flareThrowBehavior = GetComponent<FlareThrowBehavior>();
         flashlightController = GetComponentInChildren<FlashlightController>();
+        playerAnim = GetComponent<Animator>();
     }
 
     void Update()
@@ -104,6 +106,11 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
             moveDirection.y -= 1;
+
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+            playerAnim.SetBool("isSwimming", true);
+        else
+            playerAnim.SetBool("isSwimming", false);
 
         return moveDirection;
     }
