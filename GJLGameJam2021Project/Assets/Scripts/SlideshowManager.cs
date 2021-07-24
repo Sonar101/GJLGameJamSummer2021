@@ -26,6 +26,19 @@ public class SlideshowManager : MonoBehaviour
 
     public void skip()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+        // Unload/Reset the next scenes if they've already been loaded
+        if (SceneManager.GetSceneByBuildIndex(nextSceneIndex).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(nextSceneIndex);
+        }
+        if (SceneManager.GetSceneByBuildIndex(nextSceneIndex + 1).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(nextSceneIndex + 1);
+        }
+
+        // Load and play the next scene
+        SceneManager.LoadScene(nextSceneIndex, LoadSceneMode.Single);
     }
 }
