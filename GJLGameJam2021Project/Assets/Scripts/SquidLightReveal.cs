@@ -12,6 +12,7 @@ public class SquidLightReveal : MonoBehaviour
     public float pauseDuration = 3f; // (in seconds)
     public float timeBeforePlayerControl = 10f; // (in seconds)
     public float cameraLerpRate = 0.01f;
+    public GameObject shadowWall;
     
     // Start is called before the first frame update
     void Start()
@@ -23,10 +24,10 @@ public class SquidLightReveal : MonoBehaviour
 
     public void StartRevealCoroutine()
     {
-        StartCoroutine(PerformReveal());
+        StartCoroutine(PerformLightOnlyReveal());
     }
 
-    IEnumerator PerformReveal()
+    IEnumerator PerformFullCameraReveal()
     {
         // start panning towards the monster's eye
         playerController.setDeath(true);                                    // disable player controls
@@ -47,5 +48,14 @@ public class SquidLightReveal : MonoBehaviour
         // hand player full control back
         playerController.setDeath(false);                                   // return control to player
         camMover.setCamLerpRate(ogLerpRate);                                // return cam to original lerp rate
+    }
+
+    IEnumerator PerformLightOnlyReveal()
+    {
+        shadowWall.SetActive(false);
+        lightAnimator.SetBool("isLightingUp", true);                        // trigger light anim fade in
+        yield return new WaitForSecondsRealtime(panInDuration);             // (after a delay)
+        lightAnimator.SetBool("isLightingUp", false);                       // trigger light anim fade out
+        shadowWall.SetActive(true);
     }
 }
