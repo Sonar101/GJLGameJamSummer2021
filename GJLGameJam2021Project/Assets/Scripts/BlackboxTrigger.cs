@@ -8,6 +8,10 @@ public class BlackboxTrigger : Interactable
     public Sprite part1Destroy;
     public Sprite part2Destroy;
     public Sprite part3Destroy;
+
+    [Header("SFX")]
+    public RandomAudioClip CrackSFX;
+
     private int keyPressCounter = 0;
     // Start is called before the first frame update
     protected override void Start()
@@ -23,18 +27,22 @@ public class BlackboxTrigger : Interactable
             destroying.sprite = part1Destroy;
             keyPressCounter = 1;
             print(keyPressCounter);
+
+            CrackSFX?.playRandom();
         }
         else if(Input.GetKeyDown(KeyCode.E) && keyPressCounter == 1)
         {
             destroying.sprite = part2Destroy;
             keyPressCounter = 2;
             print(keyPressCounter);
+            CrackSFX?.playRandom();
         }
         else if(Input.GetKeyDown(KeyCode.E) && keyPressCounter == 2)
         {
             destroying.sprite = part3Destroy;
             keyPressCounter = 3;
             print(keyPressCounter);
+            CrackSFX?.playRandom();
         }
         else if (Input.GetKeyDown(KeyCode.E) && keyPressCounter == 3)
         {
