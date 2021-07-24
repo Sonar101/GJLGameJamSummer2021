@@ -13,6 +13,10 @@ public class DialogueManager : MonoBehaviour
     public float typingSpeed = .01f;
     public float timeBeforeClose = 7f; // (in seconds)
 
+    [Header("SFX")]
+    public AudioSource TextScrollSFX;
+    public AudioSource TextStaticSFX;
+
     private IEnumerator currCeoCoroutine;
     private IEnumerator currSelfCoroutine;
 
@@ -42,6 +46,9 @@ public class DialogueManager : MonoBehaviour
         }
         currCeoCoroutine = TypeCeoSentence(sentence);
         StartCoroutine(currCeoCoroutine);
+
+        TextScrollSFX?.PlayDelayed(0.25f);
+        TextStaticSFX?.Play();
     }
 
     IEnumerator TypeCeoSentence(string sentence)
@@ -52,6 +59,7 @@ public class DialogueManager : MonoBehaviour
             ceoText.text += letter;
             yield return new WaitForSecondsRealtime(typingSpeed);
         }
+        TextScrollSFX?.Stop();
         yield return new WaitForSecondsRealtime(timeBeforeClose);
         closeCeoText();
     }
@@ -59,6 +67,9 @@ public class DialogueManager : MonoBehaviour
     private void closeCeoText()
     {
         ceoTextAnimator.SetBool("IsOpen", false);
+
+        TextScrollSFX?.Stop();
+        TextStaticSFX?.Play();
     }
 
     // --- Self Text Functions
