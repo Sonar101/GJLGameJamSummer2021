@@ -48,6 +48,7 @@ public class LevelManager : MonoBehaviour
 
     public event Action onCloseAllDoors;
     public event Action onCameraRumble;
+    public event Action onCloseAllSwitches;
     public void CloseAllDoors()
     {
         if (onCloseAllDoors != null)
@@ -55,6 +56,9 @@ public class LevelManager : MonoBehaviour
 
         if (onCameraRumble != null)
             onCameraRumble();
+
+        if (onCloseAllSwitches != null)
+            onCloseAllSwitches();
     }
 
     public void DestroyBlackBox()
