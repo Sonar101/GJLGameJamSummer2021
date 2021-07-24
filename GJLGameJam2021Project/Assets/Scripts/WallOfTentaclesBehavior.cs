@@ -34,10 +34,11 @@ public class WallOfTentaclesBehavior : MonoBehaviour
         {
             position += new Vector3(0, finalStretchSpeed * Time.deltaTime, 0);
             transform.position = position;
-            
+            print("reach fast speed");
         }
         else
         {
+            
             position += new Vector3(0, slowSpeed * Time.deltaTime, 0);
             transform.position = position;
         }

@@ -14,7 +14,8 @@ public class ProximityGlow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerTransform = GetComponentInParent<EnemyAI>().Player;
+        //playerTransform = GetComponentInParent<EnemyAI>().Player;
+        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         greenLight = GetComponent<Light2D>();
     }
 

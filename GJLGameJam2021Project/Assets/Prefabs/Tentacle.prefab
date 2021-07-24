@@ -262,7 +262,7 @@ MonoBehaviour:
   speed: 0.5
   maxDistance: 3
   acceleration: 2
-  Player: {fileID: 0}
+  Player: {fileID: 7152835660341888381, guid: a45a1797320c443739732f3933bb7e57, type: 3}
 --- !u!1 &4556246713936584578
 GameObject:
   m_ObjectHideFlags: 0

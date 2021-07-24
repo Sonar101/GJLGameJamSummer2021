@@ -136,10 +136,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  maxDistance: 0
-  slowSpeed: 0.002
-  maxSpeed: 0.0025
-  finalStretchSpeed: 0.01
+  maxHeight: -15
+  slowSpeed: 0.5
+  finalStretchSpeed: 2
 --- !u!212 &6516957323592787725
 SpriteRenderer:
   m_ObjectHideFlags: 0
