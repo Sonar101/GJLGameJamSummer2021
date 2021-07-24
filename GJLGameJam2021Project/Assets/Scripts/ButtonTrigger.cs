@@ -22,6 +22,9 @@ public class ButtonTrigger : Interactable
             buttonPressSFX?.Play();
             leverAnim.SetBool("LeverOn", true);
             LevelManager.current.ButtonPress(buttonID);
+        } else
+        {
+            leverAnim.SetTrigger("LockingUp");
         }
     }
 
