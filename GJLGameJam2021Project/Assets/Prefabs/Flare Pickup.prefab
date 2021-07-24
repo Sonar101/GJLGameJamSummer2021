@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 827915179}
   - component: {fileID: 5863843927770895876}
   - component: {fileID: 4427962812357775260}
+  - component: {fileID: 5409655259269058593}
   m_Layer: 0
   m_Name: Flare Pickup
   m_TagString: Flare
@@ -158,3 +159,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.280263, y: 3.3868966}
   m_EdgeRadius: 0
+--- !u!114 &5409655259269058593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7818939668634315569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13433d6fe651f9459964349f3708886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

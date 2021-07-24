@@ -57,6 +57,7 @@ public class RespawnManager : MonoBehaviour
         playerIsRespawning = false;
         LevelManager.current.CloseAllDoors();
         LevelManager.current.DeathplaneReset();
+        LevelManager.current.RespawnAllFlares();
         print("Should reset doors");
     }
 }

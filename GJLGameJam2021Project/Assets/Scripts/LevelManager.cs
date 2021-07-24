@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
     public GameObject rightInvisbleWallText;
     public GameObject leftInvisbleWallTextAfterBlackBox;
     public GameObject rightInvisbleWallTextAfterBlackBox;
+    public FlareSpawner flareSpawner;
 
     public AudioSource roarSFX;
     public AudioSource pickupSFX;
@@ -59,6 +60,13 @@ public class LevelManager : MonoBehaviour
 
         if (onCloseAllSwitches != null)
             onCloseAllSwitches();
+    }
+
+    public event Action onRespawnAllFlares;
+    public void RespawnAllFlares()
+    {
+        if (onRespawnAllFlares != null)
+            onRespawnAllFlares();
     }
 
     public void DestroyBlackBox()
