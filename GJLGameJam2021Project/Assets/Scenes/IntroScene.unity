@@ -401,6 +401,10 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7037170058064022106, guid: 8214eb837196e7043811b8cdab2c2c8d, type: 3}
+      propertyPath: SFX.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037170058064022106, guid: 8214eb837196e7043811b8cdab2c2c8d, type: 3}
       propertyPath: timeBetweenSlides
       value: 3.5
       objectReference: {fileID: 0}
