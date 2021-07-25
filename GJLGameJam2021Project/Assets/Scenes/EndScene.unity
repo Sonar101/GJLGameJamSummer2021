@@ -445,8 +445,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1498006822169298939, guid: 61a2219a2e78b274ea5d72437133b00e, type: 3}
       propertyPath: SFX.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1498006822169298939, guid: 61a2219a2e78b274ea5d72437133b00e, type: 3}
+      propertyPath: SFX.Array.data[0]
+      value: 
+      objectReference: {fileID: 1617773340}
     - target: {fileID: 1498006822169298939, guid: 61a2219a2e78b274ea5d72437133b00e, type: 3}
       propertyPath: SFX.Array.data[1]
       value: 
