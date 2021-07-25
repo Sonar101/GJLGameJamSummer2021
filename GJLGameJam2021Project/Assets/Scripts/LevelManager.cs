@@ -19,6 +19,7 @@ public class LevelManager : MonoBehaviour
     public GameObject rightInvisbleWallText;
     public GameObject leftInvisbleWallTextAfterBlackBox;
     public GameObject rightInvisbleWallTextAfterBlackBox;
+    public GameObject GoingBackUpText;
     public FlareSpawner flareSpawner;
 
     public AudioSource roarSFX;
@@ -83,6 +84,7 @@ public class LevelManager : MonoBehaviour
         rightInvisbleWallText.SetActive(false);
         leftInvisbleWallTextAfterBlackBox.SetActive(true);
         rightInvisbleWallTextAfterBlackBox.SetActive(true);
+        GoingBackUpText.SetActive(true);
     }
 
     public event Action onTryInteract;
