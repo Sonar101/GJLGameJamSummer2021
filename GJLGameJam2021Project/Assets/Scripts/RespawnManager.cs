@@ -9,6 +9,8 @@ public class RespawnManager : MonoBehaviour
     private bool playerIsRespawning = false;
     public GameObject screenFaderPrefab;
     public Transform respawnLocation;
+
+    public AudioSource DeathSFX;
     
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,8 @@ public class RespawnManager : MonoBehaviour
         // initiate bubble particle effect
         print("Should stop player movement and trigger bubble particle effect");
         screenFader.FadeOutForRespawn();
+
+        DeathSFX?.Play();
     }
 
     public void resetPlayerAndLevel()
