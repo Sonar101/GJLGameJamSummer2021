@@ -137,8 +137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   maxHeight: -15
-  slowSpeed: 0.4
-  finalStretchSpeed: 2
+  slowSpeed: 0.44
+  finalStretchSpeed: 2.1
 --- !u!212 &6516957323592787725
 SpriteRenderer:
   m_ObjectHideFlags: 0

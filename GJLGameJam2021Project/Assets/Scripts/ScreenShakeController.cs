@@ -7,6 +7,8 @@ public class ScreenShakeController : MonoBehaviour
     private float shakeTimeRemaining, shakePower;
     private bool isScreenShaking = false;
     public AudioSource roarSFX;
+    public float length = .5f;
+    public float power = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,7 @@ public class ScreenShakeController : MonoBehaviour
                 //print(rand);
                 if (rand == 17)
                 {
-                    StartShake(.5f, 0.3f);
+                    StartShake(length, power);
                     roarSFX?.Play();
                     StartCoroutine(checkingTime());
                 }
