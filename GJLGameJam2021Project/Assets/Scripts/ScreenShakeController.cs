@@ -19,15 +19,15 @@ public class ScreenShakeController : MonoBehaviour
         if (!isScreenShaking)
         {
             
-            int rand = Random.Range(0, 2000);
+            int rand = Random.Range(0, 500);
             if (LevelManager.current.GetBlackBoxBroken())
             {
 
-                print(rand);
+                //print(rand);
                 if (rand == 17)
                 {
                     StartShake(.5f, 0.3f);
-                    //roarSFX?.Play();
+                    roarSFX?.Play();
                     StartCoroutine(checkingTime());
                 }
 
@@ -66,7 +66,7 @@ public class ScreenShakeController : MonoBehaviour
     {
         isScreenShaking = true;
         // process pre-yield
-        yield return new WaitForSeconds(20.0f);
+        yield return new WaitForSeconds(10.0f);
         // process post-yield
         isScreenShaking = false;
     }
